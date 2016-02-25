@@ -35,6 +35,7 @@ Temporary Items
 auto-save-list
 tramp
 .\#*
+emacs/.emacs.d/.cache/
 
 # Org-mode
 .org-id-locations
