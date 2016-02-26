@@ -34,6 +34,7 @@ values."
      markdown
      org
      osx
+     purescript
      ruby
      ruby-on-rails
      spell-checking
