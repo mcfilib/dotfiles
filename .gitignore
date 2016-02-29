@@ -1,17 +1,17 @@
 # -*- mode: gitignore; -*-
 
-# OSX
+# osx
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
+# icons
 Icon
 
-# Thumbnails
+# thumbnails
 ._*
 
-# Files that might appear in the root of a volume
+# files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -19,7 +19,7 @@ Icon
 .Trashes
 .VolumeIcon.icns
 
-# Directories potentially created on remote AFP share
+# directories potentially created on remote afp share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
@@ -37,7 +37,7 @@ tramp
 .\#*
 emacs/.emacs.d/.cache/
 
-# Org-mode
+# org-mode
 .org-id-locations
 *_archive
 
@@ -54,7 +54,7 @@ emacs/.emacs.d/.cache/
 # reftex files
 *.rel
 
-# AUCTeX auto folder
+# auctex auto folder
 /auto/
 
 # cask packages
@@ -63,8 +63,11 @@ emacs/.emacs.d/.cache/
 # server auth directory
 /server/
 
-# Compiled
+# compiled
 *.elc
 
-# Packaging
+# packaging
 .cask
+
+# work
+zsh/.zsh/work.zsh
