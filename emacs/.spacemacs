@@ -260,7 +260,11 @@ layers configuration. You are free to put any user code."
 
   ;; haskell configuration
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-  (add-to-list 'exec-path "~/.local/bin/"))
+  (add-to-list 'exec-path "~/.local/bin/")
+
+  ;; custom key-bindings
+  (global-set-key [mouse-4] 'scroll-down-line)
+  (global-set-key [mouse-5] 'scroll-up-line))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
