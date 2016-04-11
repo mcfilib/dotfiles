@@ -256,7 +256,20 @@ layers configuration. You are free to put any user code."
   (setq css-indent-offset 2)
 
   ;; specify default before save hooks
-  (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+  (add-hook 'before-save-hook
+            (lambda ()
+              ;; general
+              (delete-trailing-whitespace)
+
+              ;; haskell
+              (when (eq major-mode 'haskell-mode)
+                (haskell-sort-imports)
+                (haskell-mode-format-imports))
+
+              ;; purscript
+              (when (eq major-mode 'purescript-mode)
+                (purescript-sort-imports)
+                (purescript-mode-format-imports))))
 
   ;; haskell configuration
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
