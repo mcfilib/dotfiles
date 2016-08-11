@@ -255,6 +255,9 @@ layers configuration. You are free to put any user code."
   ;; specify default indentation
   (setq css-indent-offset 2)
 
+  ;; disable spellchecking by default
+  (setq spell-checking-enable-by-default nil)
+
   ;; specify default before save hooks
   (add-hook 'before-save-hook
             (lambda ()
