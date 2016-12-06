@@ -27,8 +27,12 @@ values."
      better-defaults
      emacs-lisp
      git
-     haskell
-     haskell-extra
+     (haskell :variables
+              haskell-enable-ghc-mod-support nil
+              haskell-process-type 'stack-ghci
+              haskell-completion-backend 'intero
+              )
+     haskell-extras
      html
      javascript
      markdown
@@ -271,6 +275,7 @@ layers configuration. You are free to put any user code."
                 (purescript-mode-format-imports))))
 
   ;; haskell configuration
+  (add-hook 'haskell-mode-hook 'intero-mode)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
   (add-to-list 'exec-path "~/.local/bin/")
 
