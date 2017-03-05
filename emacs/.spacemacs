@@ -26,6 +26,7 @@ values."
      auto-completion
      better-defaults
      emacs-lisp
+     erlang
      git
      (haskell :variables
               haskell-enable-ghc-mod-support nil
