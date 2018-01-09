@@ -259,7 +259,6 @@ This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   ;; enable xclip
   (xclip-mode 1)
-  (turn-on-xclip)
 
   ;; specify default indentation
   (setq css-indent-offset 2)
