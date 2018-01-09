@@ -38,7 +38,6 @@ values."
      javascript
      markdown
      org
-     osx
      purescript
      ruby
      ruby-on-rails
@@ -52,9 +51,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(xclip)
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(company-mode org-projectile)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
@@ -250,12 +249,18 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  (setq tramp-ssh-controlmaster-options
+        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
   )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; enable xclip
+  (xclip-mode 1)
+  (turn-on-xclip)
+
   ;; specify default indentation
   (setq css-indent-offset 2)
 
