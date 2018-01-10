@@ -262,6 +262,7 @@ layers configuration. You are free to put any user code."
 
   ;; specify default indentation
   (setq css-indent-offset 2)
+  (setq web-mode-markup-indent-offset 2)
 
   ;; specify default before save hooks
   (add-hook 'before-save-hook
