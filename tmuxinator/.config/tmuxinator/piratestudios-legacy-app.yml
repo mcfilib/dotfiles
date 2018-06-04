@@ -1,6 +1,6 @@
-# ~/.tmuxinator/ps-legacy.yml
+# ~/.tmuxinator/piratestudios-legacy-app.yml
 
-name: ps-legacy
+name: pirate-studios-legacy-app
 root: ~/Projects/pirate-studios/legacy-app
 
 windows:
@@ -8,7 +8,9 @@ windows:
       panes:
         - ec .
   - server:
-      bundle exec puma -C config/puma.rb
+      panes:
+        - bundle exec puma -C config/puma.rb
+        - git status
   - services:
       docker-compose up
   - logs:

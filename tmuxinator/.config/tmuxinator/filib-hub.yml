@@ -1,6 +1,6 @@
-# ~/.tmuxinator/hub.yml
+# ~/.tmuxinator/filib-hub.yml
 
-name: hub
+name: filib-hub
 root: ~/
 
 windows:
