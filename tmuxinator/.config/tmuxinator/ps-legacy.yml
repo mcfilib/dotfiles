@@ -1,0 +1,15 @@
+# ~/.tmuxinator/ps-legacy.yml
+
+name: ps-legacy
+root: ~/Projects/pirate-studios/legacy-app
+
+windows:
+  - editor:
+      panes:
+        - ec .
+  - server:
+      bundle exec puma -C config/puma.rb
+  - services:
+      docker-compose up
+  - logs:
+      tail -f log/development.log
