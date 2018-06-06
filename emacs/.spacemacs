@@ -42,6 +42,7 @@ values."
      purescript
      ruby
      ruby-on-rails
+     rust
      syntax-checking
      version-control
      yaml
