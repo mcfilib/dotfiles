@@ -8,8 +8,9 @@ windows:
       layout: main-vertical
       panes:
         - ec .
-  - rustc:
-      cargo watch
-
+  - compiler:
+      panes:
+        - cargo watch
+        - git status
   - services:
       docker-compose up
