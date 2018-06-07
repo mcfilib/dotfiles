@@ -10,3 +10,6 @@ windows:
         - ec .
   - rustc:
       cargo watch
+
+  - services:
+      docker-compose up
