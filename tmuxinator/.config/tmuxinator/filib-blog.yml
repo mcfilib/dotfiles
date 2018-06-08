@@ -1,0 +1,15 @@
+# ~/.tmuxinator/filib-blog.yml
+
+name: filib-blog
+root: ~/Projects/personal/mcfilib.github.io
+
+pre: git checkout develop
+windows:
+  - editor:
+      ec .
+  - compiler:
+      layout: even-vertical
+      panes:
+        - stack install --fast --file-watch
+        - stack exec filib-io watch
+        - git status
