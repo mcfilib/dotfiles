@@ -3,7 +3,7 @@
 name: filib-blog
 root: ~/Projects/personal/mcfilib.github.io
 
-pre: git checkout develop
+on_project_start: git checkout develop
 windows:
   - editor:
       ec .
