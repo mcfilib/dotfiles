@@ -1,17 +1,17 @@
 # ~/.tmuxinator/piratestudios-legacy-app.yml
 
 name: pirate-studios-legacy-app
-root: ~/Projects/pirate-studios/legacy-app
+root: ~/Projects/pirate-studios/pirate-studios
 
 windows:
   - editor:
       panes:
         - ec .
   - server:
+      layout: even-vertical
       panes:
-        - bundle exec puma -C config/puma.rb
+        - make up
+        - sleep 15; make console
         - git status
-  - services:
-      docker-compose up
   - logs:
-      tail -f log/development.log
+      sleep 15; make logs
