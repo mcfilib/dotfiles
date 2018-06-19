@@ -11,7 +11,7 @@ windows:
       layout: even-vertical
       panes:
         - make up
-        - sleep 15; make console
+        - sleep 30; make console
         - git status
   - logs:
-      sleep 15; make logs
+      sleep 60; make logs
