@@ -13,4 +13,4 @@ windows:
         - cargo watch
         - git status
   - services:
-      docker-compose up
+      docker-compose -f docker-compose.yml.resin-issue up
