@@ -25,27 +25,23 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
-     elm
      emacs-lisp
-     erlang
      git
+     html
+     javascript
+     markdown
+     org
+     ruby
+     ruby-on-rails
+     syntax-checking
+     themes-megapack
+     version-control
+     yaml
      (haskell :variables
               haskell-enable-ghc-mod-support nil
               haskell-process-type 'stack-ghci
               haskell-completion-backend 'intero
               )
-     haskell-extras
-     html
-     javascript
-     markdown
-     org
-     purescript
-     ruby
-     ruby-on-rails
-     rust
-     syntax-checking
-     version-control
-     yaml
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom))
