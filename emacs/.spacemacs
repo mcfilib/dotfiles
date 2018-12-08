@@ -279,6 +279,9 @@ layers configuration. You are free to put any user code."
   (add-to-list 'exec-path "~/.local/bin/")
 
   ;; custom key-bindings
+  (global-set-key (kbd "C-c p f") 'projectile-find-file)
+
+  ;; mouse
   (global-set-key [mouse-4] 'scroll-down-line)
   (global-set-key [mouse-5] 'scroll-up-line))
 
