@@ -13,5 +13,3 @@ windows:
         - make up
         - sleep 30; make console
         - git status
-  - logs:
-      sleep 60; make logs

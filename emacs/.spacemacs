@@ -31,10 +31,12 @@ values."
      javascript
      markdown
      org
+     react
      ruby
      ruby-on-rails
      syntax-checking
      themes-megapack
+     typescript
      version-control
      yaml
      (haskell :variables
@@ -51,7 +53,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(xclip)
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '(company-mode org-projectile)
+   dotspacemacs-excluded-packages '(company-mode org-projectile zonokai-theme)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
@@ -234,8 +236,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
-   ))
+   dotspacemacs-whitespace-cleanup nil))
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
@@ -243,8 +244,7 @@ It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
   (setq tramp-ssh-controlmaster-options
-        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
-  )
+        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no"))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -253,9 +253,19 @@ layers configuration. You are free to put any user code."
   ;; enable xclip
   (xclip-mode 1)
 
+  ;; https://github.com/syl20bnr/spacemacs/issues/10433
+  (defun web-development-indent (n)
+    (setq css-indent-offset n)
+    (setq javascript-indent-level n)
+    (setq js-indent-level n)
+    (setq js2-basic-offset n)
+    (setq typescript-indent-level n)
+    (setq web-mode-code-indent-offset n)
+    (setq web-mode-css-indent-offset n)
+    (setq web-mode-markup-indent-offset n))
+
   ;; specify default indentation
-  (setq css-indent-offset 2)
-  (setq web-mode-markup-indent-offset 2)
+  (web-development-indent 2)
 
   ;; specify default before save hooks
   (add-hook 'before-save-hook
