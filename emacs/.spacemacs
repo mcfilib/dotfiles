@@ -243,6 +243,9 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; fix https://github.com/syl20bnr/spacemacs/issues/5186
+  (setq recentf-save-file (format "%s.%s" recentf-save-file server-name))
+
   ;; enable xclip
   (xclip-mode 1)
 
