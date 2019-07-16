@@ -1,4 +1,4 @@
-# ~/.tmuxinator/piratestudios-legacy-app.yml
+# ~/.tmuxinator/piratestudios-deck.yml
 
 name: pirate-studios-legacy-app
 root: ~/Projects/pirate-studios/pirate-studios
