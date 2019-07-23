@@ -70,5 +70,8 @@ emacs/.local
 # packaging
 .cask
 
+# tmuxinator
+tmuxinator/.config/configstore/
+
 # work
 zsh/.zsh/work.zsh
