@@ -36,7 +36,7 @@ auto-save-list
 tramp
 .\#*
 emacs/.emacs.d/.cache/
-emacs/.local/bin
+emacs/.local
 
 # org-mode
 .org-id-locations
