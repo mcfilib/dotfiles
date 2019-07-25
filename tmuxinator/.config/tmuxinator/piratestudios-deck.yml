@@ -1,7 +1,7 @@
 # ~/.tmuxinator/piratestudios-deck.yml
 
 name: pirate-studios-deck
-root: ~/Projects/pirate-studios/deck
+root: ~/Documents/Code/deck
 
 windows:
   - editor:
