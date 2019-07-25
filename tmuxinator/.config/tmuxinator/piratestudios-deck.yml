@@ -1,7 +1,7 @@
 # ~/.tmuxinator/piratestudios-deck.yml
 
-name: pirate-studios-legacy-app
-root: ~/Projects/pirate-studios/pirate-studios
+name: pirate-studios-deck
+root: ~/Projects/pirate-studios/deck
 
 windows:
   - editor:
@@ -11,5 +11,5 @@ windows:
       layout: even-vertical
       panes:
         - make up
-        - sleep 30; make console
+        - sleep 15; make console
         - git status
