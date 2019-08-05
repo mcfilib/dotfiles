@@ -7,6 +7,7 @@ ZSH_THEME="kphoen"
 plugins=(git git-extras git-flow)
 
 # oh-my-zsh settings.
+export ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 unsetopt correct
