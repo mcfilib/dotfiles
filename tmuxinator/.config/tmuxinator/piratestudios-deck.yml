@@ -13,3 +13,8 @@ windows:
         - make up
         - sleep 15; make console
         - git status
+  - logs:
+      layout: even-vertical
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log
