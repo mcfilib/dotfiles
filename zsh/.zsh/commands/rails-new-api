@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+set -ex
+
+# install rails
+gem install rails
+
+# restart psql
+pg_ctl -D /usr/local/var/postgres restart
+
+# create template in tmp directory
+TMPFILE=$(mktemp /tmp/rails-new-api.XXXX)
+cat << EOF > $TMPFILE
+run "rm Gemfile"
+file "Gemfile", <<-RUBY
+source "https://rubygems.org"
+
+ruby "#{RUBY_VERSION}"
+
+gem "rails", "~> 6.0.2"
+
+gem "bootsnap", ">= 1.4.2", require: false
+gem "pg", ">= 0.18", "< 2.0"
+gem "puma", "~> 4.1"
+gem "rack-cors"
+
+group :development, :test do
+  gem "pry-rails"
+  gem "rspec-rails"
+end
+
+group :development, :test do
+  gem "listen", ">= 3.0.5", "< 3.2"
+end
+RUBY
+
+after_bundle do
+  run "rails generate rspec:install"
+
+  git :init
+  git add: "."
+  git commit: %Q{ -m 'initial commit' }
+end
+EOF
+
+# create new rails app
+rails new $1 --api --database=postgresql --skip-spring -T --template=$TMPFILE
+
+# clean up
+rm "$TMPFILE"
