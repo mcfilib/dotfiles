@@ -25,17 +25,17 @@ gem "puma", "~> 4.1"
 gem "rack-cors"
 
 group :development, :test do
+  gem "fabrication"
   gem "pry-rails"
+  gem "rspec-rails"
 end
 
 group :development do
   gem "annotate"
-  gem "fabrication"
   gem "listen", ">= 3.0.5", "< 3.2"
 end
 
 group :test do
-  gem "rspec-rails"
   gem "shoulda-matchers"
 end
 RUBY
