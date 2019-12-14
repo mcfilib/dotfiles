@@ -283,6 +283,7 @@ layers configuration. You are free to put any user code."
   (add-hook 'haskell-mode-hook 'intero-mode)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
   (add-to-list 'exec-path "~/.local/bin/")
+  (add-to-list 'exec-path "/usr/local/bin/")
 
   ;; custom key-bindings
   (global-set-key (kbd "C-c p f") 'projectile-find-file)
