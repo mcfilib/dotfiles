@@ -33,6 +33,7 @@ end
 
 group :development do
   gem "annotate"
+  gem "rails-erd"
   gem "listen", ">= 3.0.5", "< 3.2"
 end
 
@@ -44,6 +45,7 @@ RUBY
 
 after_bundle do
   run "rails generate annotate:install"
+  run "rails generate erd:install"
   run "rails generate rspec:install"
   append_to_file "spec/rails_helper.rb" do
     <<~CFG
