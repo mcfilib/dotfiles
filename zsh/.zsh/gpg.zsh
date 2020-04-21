@@ -1,1 +1,1 @@
-unalias gpg2
+unalias gpg 2>/dev/null
