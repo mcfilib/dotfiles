@@ -31,6 +31,7 @@ values."
      javascript
      markdown
      org
+     python
      react
      ruby
      ruby-on-rails
