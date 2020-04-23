@@ -1,4 +1,4 @@
-# https://gitlab.com/snippets/1727144
+# forked from: https://gitlab.com/snippets/1727144
 
 alias dm="docker-machine"
 
@@ -9,6 +9,7 @@ function dms() {
     else
         dm start default
         dm regenerate-certs -f default
+        dm ssh default "sudo bash -c 'echo \"192.168.99.1 git.lab\" >> /etc/hosts'"
         eval "$(dm env default)"
     fi
     rm -f "${HOME}/.dm-running"
