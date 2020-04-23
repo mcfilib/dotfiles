@@ -9,7 +9,7 @@ function dms() {
     else
         dm start default
         dm regenerate-certs -f default
-        dm ssh default "sudo bash -c 'echo \"192.168.99.1 git.lab\" >> /etc/hosts'"
+        dm ssh default "sudo bash -c 'echo \"192.168.99.1 gitlab.localdev\" >> /etc/hosts'"
         eval "$(dm env default)"
     fi
     rm -f "${HOME}/.dm-running"
