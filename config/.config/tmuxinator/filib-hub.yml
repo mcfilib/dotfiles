@@ -1,0 +1,14 @@
+# ~/.tmuxinator/filib-hub.yml
+
+name: filib-hub
+root: ~/
+
+windows:
+  - monitoring:
+      layout: even-vertical
+      panes:
+        - htop
+        - watch "ps aux | sort -nrk 3,3 | head -n 5"
+        - watch -n 1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
+        - watch -n 1 "sensors|grep Core"
+        - tail -f /var/log/kern.log
