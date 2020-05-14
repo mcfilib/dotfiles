@@ -247,6 +247,9 @@ layers configuration. You are free to put any user code."
   ;; fix https://github.com/syl20bnr/spacemacs/issues/5186
   (cancel-timer recentf-auto-save-timer)
 
+  ;; fix https://github.com/syl20bnr/spacemacs/issues/13582
+  (spacemacs/load-spacemacs-env t)
+
   ;; enable xclip
   (xclip-mode 1)
 
