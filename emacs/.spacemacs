@@ -31,7 +31,7 @@ values."
      javascript
      markdown
      org
-     python
+     (python :variables python-backend 'lsp)
      react
      ruby
      ruby-on-rails
