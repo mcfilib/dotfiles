@@ -31,7 +31,6 @@ values."
      javascript
      markdown
      org
-     (python :variables python-backend 'lsp)
      react
      ruby
      ruby-on-rails
@@ -45,6 +44,12 @@ values."
               haskell-process-type 'stack-ghci
               haskell-completion-backend 'intero
               )
+     (python :variables
+             python-backend 'lsp
+             python-tab-width 4
+             python-fill-column 120
+             python-formatter 'black
+             python-pipenv-activate t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom))
@@ -249,6 +254,9 @@ layers configuration. You are free to put any user code."
 
   ;; fix https://github.com/syl20bnr/spacemacs/issues/13582
   (spacemacs/load-spacemacs-env t)
+
+  ;; set up fly-check to ignore the E501 error
+  (setq-default flycheck-flake8-maximum-line-length 120)
 
   ;; enable xclip
   (xclip-mode 1)
