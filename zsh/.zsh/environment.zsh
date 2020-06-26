@@ -20,3 +20,6 @@ export EDITOR="emacsclient"
 
 # gpg
 export GPG_TTY=$(tty)
+
+# limits
+ulimit -n 4096
