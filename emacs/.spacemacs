@@ -255,7 +255,7 @@ layers configuration. You are free to put any user code."
   ;; fix https://github.com/syl20bnr/spacemacs/issues/13582
   (spacemacs/load-spacemacs-env t)
 
-  ;; set up fly-check to ignore the E501 error
+  ;; set up fly-checkto ignore the E501 error
   (setq-default flycheck-flake8-maximum-line-length 120)
 
   ;; enable xclip
@@ -271,6 +271,11 @@ layers configuration. You are free to put any user code."
     (setq web-mode-code-indent-offset n)
     (setq web-mode-css-indent-offset n)
     (setq web-mode-markup-indent-offset n))
+
+  ;; fix rubocop issue
+  (setq flycheck-command-wrapper-function
+        (lambda (command)
+          (append '("bundle" "exec") command)))
 
   ;; specify default indentation
   (web-development-indent 2)
