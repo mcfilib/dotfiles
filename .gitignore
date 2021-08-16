@@ -74,5 +74,8 @@ emacs/.local
 tmuxinator/.config/configstore/
 
 # work
+config/.config/configstore/
 config/.config/gcloud/
+config/.config/iterm2/
+config/.config/yarn/
 zsh/.zsh/work.zsh
