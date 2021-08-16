@@ -17,8 +17,7 @@ values."
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
-   '(sql
-     ;; ----------------------------------------------------------------
+   '(;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
@@ -27,6 +26,7 @@ values."
      better-defaults
      emacs-lisp
      git
+     go
      html
      javascript
      markdown
@@ -270,9 +270,9 @@ layers configuration. You are free to put any user code."
     (setq web-mode-markup-indent-offset n))
 
   ;; fix rubocop issue
-  (setq flycheck-command-wrapper-function
-        (lambda (command)
-          (append '("bundle" "exec") command)))
+  ;; (setq flycheck-command-wrapper-function
+  ;;       (lambda (command)
+  ;;         (append '("bundle" "exec") command)))
 
   ;; specify default indentation
   (web-development-indent 2)
