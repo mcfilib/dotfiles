@@ -1,3 +1,4 @@
+alias docker="nerdctl"
 alias e="emacs -nw"
 alias ec="emacsclient -t -a nano"
 alias gbgc="git branch | grep -v "master" | xargs git branch -D"
