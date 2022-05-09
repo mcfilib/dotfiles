@@ -1,5 +1,5 @@
 # make homebrew packages toplevel
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/go/bin:$PATH"
+export PATH="$HOME/.rd/bin:/usr/local/bin:/usr/local/sbin:$HOME/go/bin:$PATH"
 
 # path to oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
